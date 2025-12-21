@@ -1,3 +1,4 @@
+//Program to calculate final salary of employee based on department and role and provide access level based on final salary
 import java.util.Scanner;
 
 public class Employee_acces_salary{
