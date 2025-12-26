@@ -1,0 +1,18 @@
+Used to store same type of data
+to access the elements of array we use index
+index value starts from 0 till n-1
+n is length of array
+to get length of array we have length variable.//arr.length
+ArrayIndexOutOfBoundException will get if we use index more than size-1;
+
+
+How to create an array?
+1. Using array literals.
+ Sytax:
+    datatype[] variable = {v1,v2,v3,....vn};
+ When we know the values of array
+
+2.Using new keyword
+ Syntax:
+    datatype[] variable = new datatype[size];
+
