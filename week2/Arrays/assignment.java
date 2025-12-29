@@ -11,7 +11,7 @@ public class assignment{
             tempSum += temp;
         }
         double avgTemp = (double)tempSum / temperatures.length;
-        System.out.println("Average Temperature: " + avgTemp + "°C");
+        System.out.println("Average Temperature: " + avgTemp + "C");
         // Activity 2 Hottest and Coldest Day
         int maxTemp = Integer.MIN_VALUE;
         int minTemp = Integer.MAX_VALUE;
@@ -27,8 +27,8 @@ public class assignment{
                 minDay = i + 1;
             }
         }
-        System.out.println("Highest Temperature: " + maxTemp + "°C");
-        System.out.println("Lowest Temperature: " + minTemp + "°C");
+        System.out.println("Highest Temperature: " + maxTemp + "C");
+        System.out.println("Lowest Temperature: " + minTemp + "C");
         // Activity 3 Count Hot Days
         int hotDaysCount = 0;
         for(int temp : temperatures){
@@ -36,7 +36,7 @@ public class assignment{
                 hotDaysCount++;
             }
         }
-        System.out.println("Number of hot days (>30°C): " + hotDaysCount);
+        System.out.println("Number of hot days (>30C): " + hotDaysCount);
         // Activity 4 – Total and Average Sales
         int salesSum = 0;
         for(int sale : sales){

@@ -1,0 +1,44 @@
+//difference between static method and static block
+//A static method is a method that belongs to the class rather than to any specific instance of the class. 
+//      It can be called without creating an instance of the class. Static methods can access static variables and 
+//      other static methods directly, but they cannot access instance variables or instance methods directly because 
+//      they do not belong to any particular object.
+
+//A static block, also known as a static initialization block, 
+// is a block of code that is executed when the class is loaded into memory. 
+// It is used to initialize static variables or perform any setup that needs to be done once for the class. 
+// Static blocks are executed only once, when the class is first loaded, before any static methods or instance methods are called.
+
+//can we overload main method in java?
+// //Yes, we can overload the main method in Java. Overloading the main method means creating multiple
+// methods with the same name "main" but with different parameter lists (different types or number of parameters).
+// However, the Java Virtual Machine (JVM) always looks for the specific signature public static void main(String[] args)
+// to start the execution of a Java program. Therefore, while you can overload the main method, only the standard main method will be used as the entry point of the program.
+
+How to create object?
+->by using new keyword
+->new ClassName();
+
+
+what is new?
+->new is a keyword
+->it is unary operator
+->with the help new keyword we can creat n numbers of object for one clas.
+->It will return address of an object.
+->Whenever we are using new keyword new object will be created.
+
+ClassName is a non primitive datatype which is used to store address of an object.
+
+How to use non static members inside static context ?
+->With the help of object reference variable.
+***NOTE:-Every object is directly pointing towards class static area***
+
+whenever we have non static variable and local variable with same name ,
+if we use directly inside non static context the high priority is given for local variable.
+to use static variable we have to use this .
+ this:
+    this is keyword
+    it is a non static reference variable,
+    it is used to store address of current object
+    it can be used only inside non static context
+    

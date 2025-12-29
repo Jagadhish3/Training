@@ -18,83 +18,69 @@ How to create an array?
 
 
 --------------------------------------------------
-SmartTracker App – Daily Sales and Weather Insights
-Welcome to the world of SmartTracker, a digital assistant used by small shop owners and local weather stations.
-The app stores and analyzes daily sales and temperature data using arrays — helping users make smarter business and lifestyle decisions.
+Fitness Tracker
 
-Through this scenario, you’ll learn how 1D arrays can make data tracking and analysis efficient, accurate, and automated.
+A health and wellness company wants to build a Fitness Tracker in Java to help users monitor their daily step count and estimate calorie expenditure.
+The program should demonstrate methods, parameterized methods, and method overloading, while providing an interactive and meaningful user experience.
 
-Background Story
-You’ve been hired as a Java developer for SmartTracker Labs, a startup creating intelligent dashboards for community businesses.
-Your job is to write a Java module that analyzes:
+The system must allow users to input their daily steps, calculate calories burned using different methods, and display a personalized summary report.
 
-Shop sales over 7 days
-Temperature patterns for the same week
-Using arrays and methods, you’ll design algorithms that process, search, and update data — much like what real apps do behind the scenes.
+Real-World Context
+The company, FitTrack Technologies, plans to launch a digital wellness program for employees.
+The tracker will record the number of steps each employee takes daily and estimate the calories they burn — either:
 
-Data Setup
-int[] sales = {120, 80, 150, 90, 200, 75, 110}; // Sales for 7 days (in ₹)
-int[] temperatures = {32, 28, 31, 29, 35, 27, 30}; // Temperatures (°C) for 7 days
-Each array represents a week’s worth of data — from Monday to Sunday.
+using a standard formula (for general users), or
+an adjusted formula that considers user weight (for personalized tracking).
+This system will serve as a prototype for their upcoming mobile fitness app.
 
-Activity 1 – Average Temperature
-Goal: Find the average weekly temperature.
-Use a method to sum all values and divide by the total number of days.
+Sample User Data
+User	Steps	Weight (kg)
+1		5000	60
+2		10000	70
+3		7500	65
+4		12000	80
 
-Expected Output:
-Average Temperature: 30.3°C
+Methods Overview
+1. inputSteps()
+Type: No-argument method
+Purpose: Prompts the user to enter their daily step count using the Scanner class.
 
+2. calculateCalories(int steps)
+Type: Parameterized method
+Purpose: Calculates calories burned based only on step count.
+Formula:
+Calories = steps × 0.04
+Returns: Estimated calories burned (without weight consideration).
 
-Activity 2 – Hottest and Coldest Day
-Goal: Identify the highest and lowest recorded temperatures.
-Bonus: Try to print which day (e.g., Day 5) had those temperatures.
+3. calculateCalories(int steps, double weight) (Overloaded Method)
+Type: Parameterized and Overloaded method
+Purpose: Calculates calories burned considering the user’s weight for better accuracy.
+Formula:
+Calories = steps × weight × 0.0005
+Returns: Personalized calorie estimate.
 
-Expected Output:
-Highest Temperature: 35°C
-Lowest Temperature: 27°C
+4. showSummary()
+Type: No-argument method
+Purpose: Displays a summary showing total steps and calories burned for the day.
 
+Example Workflow
+1> Accept user input using inputSteps().
+Example:
+Steps = 10000
+Weight = 70 kg
 
-Activity 3 – Count Hot Days
-Goal: Count how many days the temperature was above 30°C.
+2> Compute calories burned using either:
+Standard formula: calculateCalories(steps)
+Weight-adjusted formula: calculateCalories(steps, weight)
 
-Expected Output:
-Number of hot days (>30°C): 3
+3> Round the result using Math.round() for a clean display.
 
+4> Display results using showSummary().
 
-Activity 4 – Total and Average Sales
-Goal: Calculate total revenue and average daily sales using array traversal.
+Example Output
+Total Steps: 10000
+Calories Burned: 350
 
-Expected Output:
-Total Sales: 825
-Average Sales: 117.86
-
-
-Activity 5 – Record-Breaking Sales
-Goal: Identify the highest and lowest sales of the week and the days they occurred.
-
-Expected Output:
-Highest Sale: 200 on Day 5
-Lowest Sale: 75 on Day 6
-
-
-Activity 6 – Count High-Sales Days
-Goal: Find out how many days had sales above ₹100.
-
-Expected Output:
-Number of high sales days (>100): 4
-
-
-Activity 7 – Search for a Specific Sale
-Goal: Search the array for a specific sale amount (for example, ₹150).
-If found, print which day it occurred.
-
-Expected Output:
-Sale 150 found on Day 3
-
-
-Activity 8 – Update Sales Record
-Goal: Suppose the shop owner updated the sales for Day 2 to ₹95.
-Update the array and display the new value.
-
-Expected Output:
-Updated sales for Day 2: 95
+Explanation:
+Calories = 10000 × 70 × 0.0005 = 350
+The program calculates calories based on the user’s step count and weight, rounding the result for clear presentation.
